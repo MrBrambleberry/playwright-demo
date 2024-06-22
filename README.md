@@ -10,7 +10,7 @@ npm install
 Requires a [node](https://nodejs.org/en/download/package-manager) runtime to run via a cli
 
 ```
-npx playwright test
+npx playwright test example.spec.ts
 ```
 
 ### Show report from last run
@@ -27,5 +27,16 @@ After that you need to run the following commands to build the image then run th
 ```
 docker build -t playwright-docker .
 
-docker run playwright-docker:latest npx playwright test
+docker run playwright-docker:latest npx playwright test example.spec.ts
+```
+
+### Generate snapshots
+Before snapshot testing we need to generate the static images our test will compare against
+```
+npx playwright test snapshot.spec.ts --update-snapshots
+```
+
+### Run snapshot tests
+```
+npx playwright test snapshot.spec.ts
 ```
