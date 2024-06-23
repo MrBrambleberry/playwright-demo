@@ -10,3 +10,4 @@ COPY playwright.config.ts /app/
 
 RUN npm install
 RUN npx playwright install
+RUN npx playwright test snapshot.spec.ts --update-snapshots

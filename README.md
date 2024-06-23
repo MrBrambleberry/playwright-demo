@@ -29,7 +29,7 @@ After that you need to run the following commands to build the image then run th
 ```
 docker build -t playwright-docker .
 
-docker run playwright-docker:latest npx playwright test example.spec.ts
+docker run playwright-docker:latest npx playwright test
 ```
 
 ### Generate snapshots
